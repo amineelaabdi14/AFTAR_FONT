@@ -14,7 +14,7 @@ export class CompetitonsComponent implements OnInit {
   users:Member  [] = [];
   page = 0;
   pages!: number;
-  size = 1;
+  size = 5;
   constructor(private service: CompetitionService,private userServive:UsersService) {}
 
   ngOnInit(): void {

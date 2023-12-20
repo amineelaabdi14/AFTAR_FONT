@@ -10,8 +10,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { UsersComponent } from './components/users/users/users.component';
 import { HuntingComponent } from './components/hunting/hunting/hunting.component';
-import { AddPartisipantModalComponent } from './component/add-partisipant-modal/add-partisipant-modal.component';
-import { AddParticipantModalComponent } from './component/utils/add-participant-modal/add-participant-modal.component';
+import { AddParticipantModalComponent } from './components/utils/add-participant-modal/add-participant-modal.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +19,6 @@ import { AddParticipantModalComponent } from './component/utils/add-participant-
     AddCompetitionModalComponent,
     UsersComponent,
     HuntingComponent,
-    AddPartisipantModalComponent,
     AddParticipantModalComponent,
   ],
   imports: [

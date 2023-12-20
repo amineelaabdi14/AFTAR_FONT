@@ -1,3 +1,6 @@
+<div class="d-flex flex-row justify-content-end mb-3 mt-4">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add-participant-modal">Add Competition</button>
+</div> 
 <div class="w-75 m-auto">
     <table class="table">
         <thead>
@@ -17,5 +20,6 @@
           </tr>
         </tbody>
       </table>
-      <app-add-participant-modal (addParticipantEvent)="addParticipant($event)"></app-add-participant-modal>
+      <app-add-participant-modal (addParticipantEvent)="addParticipant($event)" [users]="users" [competitions]="competitions"></app-add-participant-modal>
 </div>
+<!-- (addParticipantEvent)="addParticipant($event)"  -->
