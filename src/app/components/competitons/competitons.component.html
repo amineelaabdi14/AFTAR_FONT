@@ -1,0 +1,34 @@
+<div class="w-75 m-auto">
+    <div class="d-flex flex-row justify-content-end mb-3 mt-4">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add-competition-modal">Add Competition</button>
+    </div> 
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Code</th>
+            <th scope="col">Day</th>
+            <th scope="col">Start Time</th>
+            <th scope="col">End Time</th>
+            <th scope="col">Participants</th>
+            <th scope="col">Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let competition of competitions">
+            <th scope="row">{{ competition.code }}</th>
+            <td>{{competition.date}}</td>
+            <td>{{competition.startTime}}</td>
+            <td>{{competition.endTime}}</td>
+            <td>{{competition.numberOfParticipants}}</td>
+            <td>{{competition.location}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item" (click)="prevPage()"><span class="page-link" href="#">Previous</span></li>
+          <li class="page-item" (click)="nextPage()"><span class="page-link" href="#">Next</span></li>
+        </ul>
+      </nav>
+      <app-add-competition-modal (addCompetitionEvent)="addCompetition($event)"></app-add-competition-modal>
+</div>

@@ -1,0 +1,19 @@
+<form class="mt-5">
+    <label for="">Choose the competition</label>
+    <select name="" id="" class="form-select">
+      <option value="{{ competition.code }}" *ngFor="let competition of competitions">{{ competition.code }}</option>
+    </select>
+    <label for="">Choose a member</label>
+    <select name="" id="" class="form-select">
+      <option value="{{ user.num }}" *ngFor="let user of users">{{ user.full_name }}</option>
+    </select>
+    <label for="">Choose a fish</label>
+    <select name="" id="" class="form-select">
+      <option value="{{ fish.id }}" *ngFor="let fish of fishes">{{ fish.name }}</option>
+    </select>
+    <label for="">Weight</label>
+    <input type="number" class="form-control" placeholder="Weight">
+    <div class="d-flex flex-row justify-content-end mb-3 mt-4">
+      <button class="btn btn-secondary" type="submit">Add record</button>
+    </div> 
+  </form>

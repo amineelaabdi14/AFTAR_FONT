@@ -1,0 +1,21 @@
+<div class="w-75 m-auto">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Number</th>
+            <th scope="col">Name</th>
+            <th scope="col">Accession Date</th>
+            <th scope="col">Nationnality</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <th scope="row">{{ user.num }}</th>
+            <td>{{user.full_name}}</td>
+            <td>{{user.accession_date}}</td>
+            <td>{{user.nationality}}</td> 
+          </tr>
+        </tbody>
+      </table>
+      <app-add-participant-modal (addParticipantEvent)="addParticipant($event)"></app-add-participant-modal>
+</div>

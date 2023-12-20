@@ -1,0 +1,27 @@
+<!-- Modal -->
+<div class="modal fade" id="add-competition-modal" tabindex="-1" aria-labelledby="add-competition-modal" aria-hidden="true">
+    <div class="modal-dialog">
+      <form class="modal-content" action="" (ngSubmit)="addCompetition()">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <label for="">Day</label>
+            <input type="date" data-date-format="DD-MMMM-YYYY" class="form-control" [(ngModel)]="day" name="day">
+            <label for="">Start time</label>
+            <input type="time" class="form-control" [(ngModel)]="startTime" name="startTime">
+            <label for="">End time</label>
+            <input type="time" class="form-control" [(ngModel)]="endTime" name="endTime">
+            <label for="">Location</label>
+            <input type="text" class="form-control" [(ngModel)]="location" name="location">
+            <label for="">Number of Participants</label>
+            <input type="number" class="form-control" [(ngModel)]="numberOfParticipants" name="numberOfParticipants">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+        </div>
+    </form>
+    </div>
+  </div>
